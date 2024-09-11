@@ -1,4 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
@@ -43,6 +46,43 @@ public class Main {
 
         }
         System.out.println(listaliczbZklawiatury);
+
+        //losowanie listy bez powtórzeń!!!
+        ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int)(Math.random()*100+1);
+
+            while (listaLiczbWylosowanychBezPowtorzen.contains(liczba)){
+                liczba = (int)(Math.random()*100+1);
+            }
+            listaLiczbWylosowanychBezPowtorzen.add(liczba);
+        }
+        System.out.println("Lista bez powtórzeń");
+        System.out.println(listaLiczbWylosowanychBezPowtorzen);
+
+
+
+
+        //losowanie do zbioru
+        HashSet<Integer> zbiorLosowychBezPowtorzen = new HashSet<>();
+        while (zbiorLosowychBezPowtorzen.size()<6){  //
+            int liczba = (int)(Math.random()*100+1);
+            zbiorLosowychBezPowtorzen.add(liczba);
+
+        }
+        System.out.println(zbiorLosowychBezPowtorzen);
+
+
+        /* listy:
+        uporzadkowane, indeksowane, moga powtarzac
+        zbiory: zazwyczaj
+        nieuporzadkowane nieindeksowane bez powtorzen
+         */
+
+        //trafione
+
+        LinkedList<Integer> trafioneLiczby = new LinkedList<>();
+
     }
 }
 
