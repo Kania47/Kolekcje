@@ -1,10 +1,58 @@
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
+
+    private static ArrayList<Integer> wylosujListe(int ileElementow) {
+        //prywatna statyczna, tablica,   nazwa,      ile elementow
+        ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int) (Math.random() * 10 + 1);
+
+            while (listaLiczbWylosowanychBezPowtorzen.contains(liczba)) {
+                liczba = (int) (Math.random() * 10 + 1);
+            }
+            listaLiczbWylosowanychBezPowtorzen.add(liczba);
+        }
+        return listaLiczbWylosowanychBezPowtorzen;
+    }
+
+    private static void wypiszListe(List<Integer> listaDoWypisania) {
+        System.out.println("Podaj 6 Liczb:");
+        for (int i = 0; i < listaDoWypisania.size(); i++) {
+            System.out.println(listaDoWypisania.get(i));
+
+        }
+    }
+
+    private static ArrayList<Integer> wstawLiczbyDoListy(int ileElementow) {
+
+        ArrayList<Integer> listaliczbZklawiatury = new ArrayList<>();
+        Scanner klawiatura = new Scanner(System.in);
+        System.out.println("Podaj" + ileElementow + "Liczb:");
+        for (int i = 0; i < ileElementow; i++) {
+            int liczba = klawiatura.nextInt();
+            listaliczbZklawiatury.add(liczba);
+        }
+        return listaliczbZklawiatury;
+    }
+
+
+    private static LinkedList<Integer> zwrocElementyZObuList(ArrayList<Integer> listaliczbZklawiatury, ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen) {
+        LinkedList<Integer> trafioneLiczby = new LinkedList<>();
+        for (Integer wpisana : listaliczbZklawiatury) {
+            if (listaLiczbWylosowanychBezPowtorzen.contains(wpisana)) {
+                trafioneLiczby.add(wpisana);
+            }
+        }
+        System.out.println("trafione");
+        System.out.println(trafioneLiczby);
+        return trafioneLiczby;
+    }
+
+
+
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
