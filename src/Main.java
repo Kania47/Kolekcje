@@ -3,6 +3,11 @@ import java.util.*;
 
 public class Main {
 
+    /**
+     * Metoda wylosujListe - Losuje liste liczb całkowitych w zakresie od 1 do 100
+     * @param ileElementow - Liczba wylosowanych elementów
+     * @return - Arrayliste z liczbami wylosowanymi
+     */
     private static ArrayList<Integer> wylosujListe(int ileElementow) {
         //prywatna statyczna, tablica,   nazwa,      ile elementow
         ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen = new ArrayList<>();
@@ -18,7 +23,7 @@ public class Main {
     }
 
     private static void wypiszListe(List<Integer> listaDoWypisania) {
-        System.out.println("Podaj 6 Liczb:");
+        System.out.println("Twoja Lista");
         for (int i = 0; i < listaDoWypisania.size(); i++) {
             System.out.println(listaDoWypisania.get(i));
 
