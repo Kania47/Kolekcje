@@ -30,3 +30,9 @@ public class Main {
 //6. git remote add origin "link do repo"
 //7. git push -u origin master
 //8. git push
+
+//jak juz masz
+
+// git add .
+// git commit "commit"
+// git push
