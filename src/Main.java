@@ -29,7 +29,7 @@ public class Main {
 
         ArrayList<Integer> listaliczbZklawiatury = new ArrayList<>();
         Scanner klawiatura = new Scanner(System.in);
-        System.out.println("Podaj" + ileElementow + "Liczb:");
+        System.out.println("Podaj " + ileElementow + " Liczb:");
         for (int i = 0; i < ileElementow; i++) {
             int liczba = klawiatura.nextInt();
             listaliczbZklawiatury.add(liczba);
@@ -51,10 +51,16 @@ public class Main {
     }
 
 
-
-
     public static void main(String[] args) {
 
+
+        ArrayList<Integer> losowe = wylosujListe(6);
+        wypiszListe(losowe);
+        ArrayList<Integer> wpisane = wstawLiczbyDoListy(6);
+        wypiszListe(wpisane);
+        LinkedList<Integer> trafione =zwrocElementyZObuList(losowe, wpisane);
+        wypiszListe(trafione);
+    }
 }
 
 
