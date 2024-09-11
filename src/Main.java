@@ -22,6 +22,9 @@ public class Main {
         return listaLiczbWylosowanychBezPowtorzen;
     }
 
+    /**
+     * @param listaDoWypisania - Funkcja która wypisuje daną liste
+     */
     private static void wypiszListe(List<Integer> listaDoWypisania) {
         System.out.println("Twoja Lista");
         for (int i = 0; i < listaDoWypisania.size(); i++) {
@@ -30,6 +33,10 @@ public class Main {
         }
     }
 
+    /**
+     * @param ileElementow - Funkcja która pozwala nam wstawić liczby do listy
+     * @return - zwraca
+     */
     private static ArrayList<Integer> wstawLiczbyDoListy(int ileElementow) {
 
         ArrayList<Integer> listaliczbZklawiatury = new ArrayList<>();
@@ -43,6 +50,11 @@ public class Main {
     }
 
 
+    /**
+     * @param listaliczbZklawiatury - Jest to lista liczb które wpisze użytkownik
+     * @param listaLiczbWylosowanychBezPowtorzen - Lista liczb bez możliwości ich powtórzenia
+     * @return - zwraca
+     */
     private static LinkedList<Integer> zwrocElementyZObuList(ArrayList<Integer> listaliczbZklawiatury, ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen) {
         LinkedList<Integer> trafioneLiczby = new LinkedList<>();
         for (Integer wpisana : listaliczbZklawiatury) {
