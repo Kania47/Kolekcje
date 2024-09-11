@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -14,8 +17,32 @@ public class Main {
            //typ nazwa:nazwakolekcji
             System.out.print(element+", ");
         }
+        /*kolekcje mogą miec zmieniany rozmiar!!!! (dodawanie, usuwanie elementów)
+        kolekcje jako elementy tylko typy zlozone (Z DUZEJ LITERYYYYY)
+        listy list - interfejs, ArrayList LinkedList
+        zbiory Set - interfejs, HashSet
+        mapy,
+
+        */
 
 
+        //Przygotuj Listę z liczbami pisanymi z klawiatury
+
+        ArrayList<Integer> listaliczbZklawiatury = new ArrayList<>();
+        Scanner klawiatura = new Scanner(System.in);
+        System.out.println("Podaj 6 Liczb:");
+        for (int i = 0; i < 6 ; i++) {
+            int liczba = klawiatura.nextInt();
+            listaliczbZklawiatury.add(liczba);
+
+        }
+        //wypisz liste
+        System.out.println("Wprowadzona Tablica:");
+        for (int i = 0; i < listaliczbZklawiatury.size(); i++) {
+            System.out.println(listaliczbZklawiatury.get(i));
+
+        }
+        System.out.println(listaliczbZklawiatury);
     }
 }
 
