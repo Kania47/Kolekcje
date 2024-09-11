@@ -45,15 +45,16 @@ public class Main {
             System.out.println(listaliczbZklawiatury.get(i));
 
         }
+        System.out.println("listazklawy");
         System.out.println(listaliczbZklawiatury);
 
         //losowanie listy bez powtórzeń!!!
         ArrayList<Integer> listaLiczbWylosowanychBezPowtorzen = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
-            int liczba = (int)(Math.random()*100+1);
+            int liczba = (int)(Math.random()*10+1);
 
             while (listaLiczbWylosowanychBezPowtorzen.contains(liczba)){
-                liczba = (int)(Math.random()*100+1);
+                liczba = (int)(Math.random()*10+1);
             }
             listaLiczbWylosowanychBezPowtorzen.add(liczba);
         }
@@ -66,10 +67,11 @@ public class Main {
         //losowanie do zbioru
         HashSet<Integer> zbiorLosowychBezPowtorzen = new HashSet<>();
         while (zbiorLosowychBezPowtorzen.size()<6){  //
-            int liczba = (int)(Math.random()*100+1);
+            int liczba = (int)(Math.random()*10+1);
             zbiorLosowychBezPowtorzen.add(liczba);
 
         }
+        System.out.println("zbiorlosbezpow");
         System.out.println(zbiorLosowychBezPowtorzen);
 
 
@@ -82,9 +84,16 @@ public class Main {
         //trafione
 
         LinkedList<Integer> trafioneLiczby = new LinkedList<>();
-
+        for (Integer wpisana:listaliczbZklawiatury) {
+            if (listaLiczbWylosowanychBezPowtorzen.contains(wpisana)){
+                trafioneLiczby.add(wpisana);
+            }
+        }
+        System.out.println("trafione");
+        System.out.println(trafioneLiczby);
     }
 }
+
 
 
 
